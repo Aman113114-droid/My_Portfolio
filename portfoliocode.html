@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aman Sharma — Python Developer and Machine Learning Engineer portfolio.">
+<title>Aman Sharma | Python Developer & ML Engineer</title>
+
+<style>
+:root{
+  --bg:#050816;
+  --bg2:#0a1022;
+  --card:rgba(15,23,42,.68);
+  --card2:rgba(19,29,52,.82);
+  --text:#f7f9ff;
+  --muted:#9eabc2;
+  --line:rgba(255,255,255,.10);
+  --purple:#7c5cff;
+  --cyan:#00d9ff;
+  --green:#00f5a0;
+  --pink:#ff4ecd;
+  --max:1180px;
+  --shadow:0 25px 80px rgba(0,0,0,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--text);background:
+  radial-gradient(circle at 15% 15%,rgba(124,92,255,.18),transparent 27%),
+  radial-gradient(circle at 85% 20%,rgba(0,217,255,.12),transparent 25%),
+  linear-gradient(180deg,var(--bg),var(--bg2));
+  line-height:1.6;overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+::selection{background:rgba(124,92,255,.4)}
+.container{width:min(var(--max),92%);margin:auto}
+section{padding:105px 0;position:relative}
+#particles{position:fixed;inset:0;z-index:-5}
+.noise{position:fixed;inset:0;z-index:-4;pointer-events:none;opacity:.025;
+background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.glow{position:fixed;width:380px;height:380px;border-radius:50%;pointer-events:none;z-index:-3;transform:translate(-50%,-50%);
+background:radial-gradient(circle,rgba(124,92,255,.12),transparent 67%)}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan);font-size:.76rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase;margin-bottom:13px}
+.eyebrow:before{content:"";width:28px;height:2px;background:linear-gradient(90deg,var(--purple),var(--cyan))}
+h2{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.02;letter-spacing:-.045em;margin-bottom:15px}
+.gradient{background:linear-gradient(100deg,#fff 5%,var(--cyan) 42%,var(--purple) 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.section-head{max-width:740px;margin-bottom:45px}
+.section-head p,.muted{color:var(--muted)}
+.reveal{opacity:0;transform:translateY(25px);transition:.8s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* PROFILE BANNER */
+.profile-banner{padding:115px 0 20px}.banner-wrap{position:relative;overflow:hidden;border:1px solid rgba(0,217,255,.18);border-radius:24px;background:rgba(7,12,27,.7);box-shadow:0 25px 80px rgba(0,0,0,.28)}.banner-wrap img{display:block;width:100%;height:auto;aspect-ratio:1536/512;object-fit:cover}.banner-wrap:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 65%,rgba(5,8,22,.32))}.banner-caption{position:absolute;left:20px;bottom:14px;z-index:2;display:flex;gap:8px;align-items:center;padding:7px 11px;border:1px solid rgba(255,255,255,.1);border-radius:999px;background:rgba(5,8,22,.66);backdrop-filter:blur(12px);color:#dbeafe;font-size:.72rem;font-weight:800}@media(max-width:720px){.profile-banner{padding-top:92px}.banner-wrap{border-radius:17px}.banner-caption{left:10px;bottom:9px;font-size:.58rem;padding:5px 8px}}
+
+/* NAV */
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);width:min(1100px,92%);z-index:100;
+display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border:1px solid var(--line);
+border-radius:18px;background:rgba(5,8,22,.62);backdrop-filter:blur(20px);box-shadow:0 15px 45px rgba(0,0,0,.2)}
+.logo{font-weight:950;letter-spacing:-.04em}.logo span{color:var(--cyan)}
+.nav-links{display:flex;align-items:center;gap:5px}.nav-links a,.theme,.menu{border:0;background:transparent;color:#cbd5e1;padding:9px 11px;border-radius:10px;cursor:pointer;font-size:.86rem}
+.nav-links a:hover,.theme:hover{background:rgba(255,255,255,.07);color:#fff}.menu{display:none;font-size:1.4rem}
+
+/* HERO */
+.hero{min-height:82vh;display:grid;place-items:center;padding-top:55px}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:60px;align-items:center}
+.available{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid rgba(0,245,160,.18);background:rgba(0,245,160,.05);color:#baffea;border-radius:999px;font-size:.8rem;font-weight:800;margin-bottom:22px}
+.available i{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 15px var(--green)}
+.hero h1{font-size:clamp(3.4rem,7.8vw,6.5rem);line-height:.88;letter-spacing:-.08em;margin-bottom:24px}
+.typing{font-size:1.18rem;color:#cbd5e1;min-height:35px}.typing strong{color:var(--cyan)}
+.hero-copy{max-width:680px;color:var(--muted);font-size:1.04rem;margin:18px 0 30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:13px;border:1px solid var(--line);font-weight:850;transition:.25s;cursor:pointer}
+.primary{background:linear-gradient(135deg,var(--purple),#5b8dff);border-color:transparent;box-shadow:0 12px 32px rgba(124,92,255,.25)}
+.secondary{background:rgba(255,255,255,.045)}.btn:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.hero-visual{min-height:500px;display:grid;place-items:center;position:relative}
+.orb{width:min(385px,75vw);aspect-ratio:1;border-radius:50%;position:relative;background:
+radial-gradient(circle at 35% 27%,#fff,transparent 3%),
+radial-gradient(circle at 37% 35%,#8d6dff 0,#4d35ae 24%,#101733 62%,transparent 64%);
+box-shadow:0 0 110px rgba(124,92,255,.24),inset -38px -30px 85px rgba(0,0,0,.55);animation:float 6s ease-in-out infinite}
+.orb:before,.orb:after{content:"";position:absolute;inset:-25px;border:1px solid rgba(0,217,255,.27);border-radius:50%;transform:rotateX(67deg) rotateZ(17deg);animation:spin 12s linear infinite}
+.orb:after{inset:-48px;border-color:rgba(124,92,255,.18);animation-duration:18s;transform:rotateX(67deg) rotateZ(-20deg)}
+@keyframes float{50%{transform:translateY(-16px) rotate(2deg)}}@keyframes spin{to{transform:rotateX(67deg) rotateZ(377deg)}}
+.code-card{position:absolute;right:-5px;bottom:28px;width:330px;padding:17px;border:1px solid var(--line);border-radius:18px;background:rgba(7,12,27,.78);backdrop-filter:blur(17px);box-shadow:var(--shadow);font:12px/1.75 ui-monospace,Consolas,monospace}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ff5f57;margin-right:5px}.dot:nth-child(2){background:#ffbd2e}.dot:nth-child(3){background:#28c840}
+.code{color:#8492ab}.code b{color:#a78bfa}.code span{color:#67e8f9}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:55px}.stat{padding:19px;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:16px}.stat strong{display:block;font-size:1.45rem}.stat small{color:var(--muted)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:65px;align-items:center}
+.profile{min-height:420px;border:1px solid var(--line);border-radius:30px;background:linear-gradient(145deg,rgba(124,92,255,.15),rgba(0,217,255,.035)),var(--card);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.avatar{width:225px;height:225px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(0,217,255,.42);background:radial-gradient(circle,rgba(0,217,255,.18),rgba(124,92,255,.1),transparent 67%);font-size:3.7rem;font-weight:950;letter-spacing:-.08em}
+.profile small{position:absolute;bottom:23px;color:var(--muted)}
+.about p{color:var(--muted);margin-bottom:17px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:23px}.chip{padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.035);font-size:.79rem;color:#dce5f5}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill{padding:24px;border:1px solid var(--line);background:var(--card);border-radius:23px;transition:.3s}.skill:hover{transform:translateY(-7px);border-color:rgba(124,92,255,.35)}.icon{font-size:1.8rem;margin-bottom:12px}.skill h3{margin-bottom:7px}.skill p{color:var(--muted);font-size:.88rem}.bar{height:6px;background:rgba(255,255,255,.07);border-radius:99px;margin-top:17px;overflow:hidden}.bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--purple),var(--cyan))}
+
+/* EXPERIENCE */
+.timeline{position:relative;max-width:900px}.timeline:before{content:"";position:absolute;left:9px;top:5px;bottom:5px;width:1px;background:var(--line)}.experience{position:relative;padding-left:45px;margin-bottom:42px}.experience:before{content:"";position:absolute;left:4px;top:7px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 17px rgba(0,217,255,.7)}.date{color:var(--cyan);font-size:.76rem;font-weight:900;letter-spacing:.08em}.experience h3{font-size:1.25rem;margin:5px 0}.company{color:#c6d1e4;font-weight:700;margin-bottom:8px}.experience p{color:var(--muted);margin:5px 0}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{border:1px solid var(--line);background:var(--card);border-radius:24px;overflow:hidden;transition:.3s;box-shadow:0 16px 55px rgba(0,0,0,.16)}.project:hover{transform:translateY(-7px);border-color:rgba(0,217,255,.25)}
+.cover{height:205px;padding:23px;position:relative;overflow:hidden;background:radial-gradient(circle at 76% 24%,rgba(0,217,255,.25),transparent 20%),linear-gradient(135deg,#11182d,#17102e)}
+.cover:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-45px;bottom:-80px}.number{font:800 4rem/1 ui-monospace,monospace;color:rgba(255,255,255,.08)}.type{position:absolute;left:23px;bottom:21px;color:#bfefff;font-size:.73rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.project-body{padding:23px}.project-body h3{font-size:1.23rem;margin-bottom:7px}.project-body p{color:var(--muted);font-size:.9rem}.tags{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0}.tag{font-size:.7rem;padding:5px 8px;border-radius:7px;background:rgba(124,92,255,.1);border:1px solid rgba(124,92,255,.18);color:#dcd6ff}.links{display:flex;gap:16px;font-size:.82rem;font-weight:850}.links a:hover{color:var(--cyan)}
+
+/* EDUCATION / CERTIFICATIONS */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.glass{padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 16px 55px rgba(0,0,0,.14)}.glass h3{margin-bottom:7px}.glass p{color:var(--muted)}.certs{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.cert{padding:8px 11px;border-radius:10px;border:1px solid rgba(0,217,255,.18);background:rgba(0,217,255,.05);color:#c8f7ff;font-size:.82rem}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact{padding:28px;border:1px solid var(--line);background:var(--card);border-radius:24px}.contact h3{margin-bottom:8px}.contact>p{color:var(--muted);margin-bottom:18px}.contact-list{display:grid;gap:11px}.contact-list a{padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.025);transition:.25s}.contact-list a:hover{transform:translateX(4px);border-color:rgba(0,217,255,.35)}
+form{display:grid;gap:11px}input,textarea{width:100%;padding:13px;border:1px solid var(--line);border-radius:12px;background:rgba(0,0,0,.18);color:#fff;outline:none}input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,217,255,.08)}textarea{min-height:125px;resize:vertical}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.84rem}.footer{display:flex;justify-content:space-between;align-items:center;gap:15px}.socials{display:flex;gap:8px}.socials a{padding:8px 10px;border:1px solid var(--line);border-radius:9px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid,.about-grid{grid-template-columns:1fr}.hero{text-align:center}.hero-copy{margin-left:auto;margin-right:auto}.actions{justify-content:center}.hero-visual{min-height:410px}.stats{grid-template-columns:repeat(2,1fr)}.skills{grid-template-columns:repeat(2,1fr)}.projects,.two-col,.contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  nav{padding:10px 12px}.menu{display:block}.nav-links{display:none;position:absolute;top:60px;left:0;right:0;padding:9px;background:rgba(5,8,22,.96);border:1px solid var(--line);border-radius:15px;flex-direction:column}.nav-links.open{display:flex}.nav-links a{width:100%;text-align:center}.hero h1{font-size:3.45rem}section{padding:78px 0}.skills{grid-template-columns:1fr}.code-card{right:2%;width:285px}.footer{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+<div class="noise"></div>
+<div class="glow" id="glow"></div>
+
+<nav>
+  <a class="logo" href="#home">&lt;<span>AMAN</span>/&gt;</a>
+
+  <button class="menu" id="menu">☰</button>
+
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+    <button class="theme" id="theme">☼</button>
+  </div>
+</nav>
+
+<main>
+
+<!-- GITHUB / PORTFOLIO BANNER -->
+<section class="profile-banner" aria-label="Aman Sharma developer banner">
+  <div class="container">
+    <div class="banner-wrap reveal">
+      <img src="D:\github banner.png" alt="Aman Sharma — Python Developer and Machine Learning Engineer" loading="eager">
+      <div class="banner-caption"><span>Python Developer</span><span>•</span><span>Machine Learning Engineer</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container">
+
+<div class="hero-grid">
+
+<div class="reveal">
+
+  <div class="available">
+    <i></i>
+    Open to opportunities
+  </div>
+
+  <h1>
+    Hi, I'm
+    <span class="gradient">Aman Sharma.</span>
+    <br>
+    I build intelligent
+    <span class="gradient">solutions.</span>
+  </h1>
+
+  <div class="typing">
+    <strong id="typing"></strong><span>|</span>
+  </div>
+
+  <p class="hero-copy">
+    Python Developer and Machine Learning Engineer focused on
+    building practical data-driven applications using Python,
+    Pandas, NumPy, Scikit-learn, SQL and modern web technologies.
+  </p>
+
+  <div class="actions">
+    <a class="btn primary" href="#projects">Explore My Work →</a>
+    <a class="btn secondary" href="#contact">Let's Connect</a>
+    <a class="btn secondary" href="D:\Aman_Sharma_ATS_Resume_Clear_Readable.pdf" download>Download Resume ↓</a>
+  </div>
+
+</div>
+
+<div class="hero-visual reveal">
+
+  <div class="orb"></div>
+
+  <div class="code-card">
+    <div>
+      <i class="dot"></i>
+      <i class="dot"></i>
+      <i class="dot"></i>
+    </div>
+    <br>
+
+    <div class="code">
+      <b>class</b> Developer:
+    </div>
+
+    <div class="code">
+      &nbsp;&nbsp;name =
+      <span>"Aman Sharma"</span>
+    </div>
+
+    <div class="code">
+      &nbsp;&nbsp;role =
+      <span>"ML Engineer"</span>
+    </div>
+
+    <div class="code">
+      &nbsp;&nbsp;stack =
+      <span>"Python + AI"</span>
+    </div>
+
+    <div class="code">
+      &nbsp;&nbsp;mindset =
+      <span>"Build & Learn"</span>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+<div class="stats reveal">
+
+  <div class="stat">
+    <strong>Python</strong>
+    <small>Primary language</small>
+  </div>
+
+  <div class="stat">
+    <strong>ML / NLP</strong>
+    <small>Intelligent systems</small>
+  </div>
+
+  <div class="stat">
+    <strong>SQL</strong>
+    <small>Data & databases</small>
+  </div>
+
+  <div class="stat">
+    <strong>GitHub</strong>
+    <small>Projects & version control</small>
+  </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+
+<div class="about-grid">
+
+<div class="profile reveal">
+  <div class="avatar">AS</div>
+  <small>Python Developer • ML Engineer • Problem Solver</small>
+</div>
+
+<div class="about reveal">
+
+  <div class="eyebrow">About me</div>
+
+  <h2>
+    Turning data and ideas into
+    <span class="gradient">working products.</span>
+  </h2>
+
+  <p>
+    I'm Aman Sharma, a Computer Science and Engineering student
+    and Python Developer / Machine Learning Engineer based in
+    Meerut, Uttar Pradesh.
+  </p>
+
+  <p>
+    I have hands-on experience with data preprocessing, EDA,
+    feature engineering, classification, regression, NLP and
+    model evaluation. I enjoy solving programming problems and
+    transforming machine learning concepts into practical projects.
+  </p>
+
+  <p>
+    My development mindset is simple:
+    <strong>learn deeply, build practically and keep improving.</strong>
+  </p>
+
+  <div class="chips">
+    <span class="chip">Python</span>
+    <span class="chip">Machine Learning</span>
+    <span class="chip">NLP</span>
+    <span class="chip">Pandas</span>
+    <span class="chip">NumPy</span>
+    <span class="chip">Scikit-learn</span>
+    <span class="chip">SQL</span>
+    <span class="chip">Django</span>
+    <span class="chip">Git</span>
+    <span class="chip">GitHub</span>
+  </div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Technical skills</div>
+  <h2>My <span class="gradient">technology stack.</span></h2>
+  <p>
+    Technologies and concepts I use to develop, analyze and
+    solve real-world problems.
+  </p>
+</div>
+
+<div class="skills">
+
+  <article class="skill reveal">
+    <div class="icon">🐍</div>
+    <h3>Python</h3>
+    <p>Core programming, OOP, problem solving and application development.</p>
+    <div class="bar"><i style="--w:90%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🧠</div>
+    <h3>Machine Learning</h3>
+    <p>Classification, regression, feature engineering and model evaluation.</p>
+    <div class="bar"><i style="--w:82%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">💬</div>
+    <h3>NLP</h3>
+    <p>Text preprocessing, TF-IDF and text classification workflows.</p>
+    <div class="bar"><i style="--w:76%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">📊</div>
+    <h3>Data Science</h3>
+    <p>NumPy, Pandas, EDA, visualization and data preprocessing.</p>
+    <div class="bar"><i style="--w:84%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🗄️</div>
+    <h3>SQL / MySQL</h3>
+    <p>Working with relational data and database concepts.</p>
+    <div class="bar"><i style="--w:70%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🌐</div>
+    <h3>Web Development</h3>
+    <p>Django and modern HTML, CSS and JavaScript development.</p>
+    <div class="bar"><i style="--w:73%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🔧</div>
+    <h3>Git & GitHub</h3>
+    <p>Version control, repositories, collaboration and project management.</p>
+    <div class="bar"><i style="--w:78%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🧩</div>
+    <h3>Data Structures</h3>
+    <p>Logical thinking, algorithms and programming problem solving.</p>
+    <div class="bar"><i style="--w:78%"></i></div>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🐞</div>
+    <h3>Debugging</h3>
+    <p>Finding errors, troubleshooting and writing maintainable code.</p>
+    <div class="bar"><i style="--w:82%"></i></div>
+  </article>
+
+</div>
+</div>
+</section>
+
+
+<!-- EXPERIENCE -->
+<section id="experience">
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Experience</div>
+  <h2>Where I <span class="gradient">built & learned.</span></h2>
+</div>
+
+<div class="timeline">
+
+<div class="experience reveal">
+  <div class="date">07/2026 — 08/2026</div>
+  <h3>ML Engineer</h3>
+  <div class="company">CodeSoft Infotech · Meerut, Uttar Pradesh</div>
+  <p>• Built a customer churn classification model using Python, Pandas, NumPy and Scikit-learn.</p>
+  <p>• Performed data cleaning, EDA, categorical encoding and feature engineering.</p>
+  <p>• Compared classification algorithms using accuracy, precision, recall and F1-score.</p>
+  <p>• Developed an NLP movie genre prediction system using text preprocessing, TF-IDF and classification.</p>
+</div>
+
+<div class="experience reveal">
+  <div class="date">06/2026 — 07/2026</div>
+  <h3>ML Engineer</h3>
+  <div class="company">Cognizant · Meerut, Uttar Pradesh</div>
+  <p>• Developed a credit card fraud detection model using Python and Scikit-learn.</p>
+  <p>• Performed preprocessing, EDA, feature engineering and class-imbalance handling.</p>
+  <p>• Implemented Logistic Regression, Decision Tree and Random Forest models.</p>
+  <p>• Evaluated models using accuracy, precision, recall, F1-score and ROC-AUC.</p>
+  <p>• Built an employee salary regression model using preprocessing and categorical encoding.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Featured projects</div>
+  <h2>Things I've <span class="gradient">built.</span></h2>
+  <p>
+    A selection of machine learning, Python, AI and web development projects.
+  </p>
+</div>
+
+<div class="projects">
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">01</div>
+    <div class="type">Machine Learning</div>
+  </div>
+  <div class="project-body">
+    <h3>Credit Card Fraud Detection</h3>
+    <p>
+      Built a fraud classification model with preprocessing,
+      EDA, feature engineering, class-imbalance handling and
+      model evaluation.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Scikit-learn</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">02</div>
+    <div class="type">Machine Learning</div>
+  </div>
+  <div class="project-body">
+    <h3>Customer Churn Prediction</h3>
+    <p>
+      Developed a churn classification model and compared
+      algorithms using accuracy, precision, recall and F1-score.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">Scikit-learn</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">03</div>
+    <div class="type">NLP / AI</div>
+  </div>
+  <div class="project-body">
+    <h3>Movie Genre Prediction</h3>
+    <p>
+      Built an NLP text-classification system using text
+      preprocessing and TF-IDF feature extraction.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">NLP</span>
+      <span class="tag">TF-IDF</span>
+      <span class="tag">Scikit-learn</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">04</div>
+    <div class="type">Regression</div>
+  </div>
+  <div class="project-body">
+    <h3>Employee Salary Prediction</h3>
+    <p>
+      Built a regression model using experience, education,
+      job role, preprocessing, feature engineering and
+      categorical encoding.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">ML</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">05</div>
+    <div class="type">Python Game</div>
+  </div>
+  <div class="project-body">
+    <h3>Tic Tac Toe Game</h3>
+    <p>
+      Developed a console game demonstrating Python
+      programming, conditional logic and logical problem solving.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Logic</span>
+      <span class="tag">Game</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">06</div>
+    <div class="type">Artificial Intelligence</div>
+  </div>
+  <div class="project-body">
+    <h3>Naivya Chatbot AI</h3>
+    <p>
+      Developed an AI chatbot project demonstrating
+      conversational application development.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">AI</span>
+      <span class="tag">Chatbot</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">07</div>
+    <div class="type">Python Game</div>
+  </div>
+  <div class="project-body">
+    <h3>Hunger Man Game</h3>
+    <p>
+      Developed a game project to practice programming logic
+      and user interaction.
+    </p>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">Game</span>
+      <span class="tag">Logic</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+
+<article class="project reveal">
+  <div class="cover">
+    <div class="number">08</div>
+    <div class="type">Web Development</div>
+  </div>
+  <div class="project-body">
+    <h3>Personal Portfolio Website</h3>
+    <p>
+      Created a personal portfolio website to showcase
+      technical skills, experience and projects.
+    </p>
+    <div class="tags">
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+    </div>
+    <div class="links">
+      <a href="https://github.com/Aman113114-droid" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+</div>
+</div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Education & certifications</div>
+  <h2>Building the <span class="gradient">foundation.</span></h2>
+</div>
+
+<div class="two-col">
+
+<div class="glass reveal">
+  <h3>B.Tech — Computer Science & Engineering</h3>
+  <p>IIMT Engineering College, Meerut, Uttar Pradesh</p>
+  <p>Expected graduation: August 2027</p>
+</div>
+
+<div class="glass reveal">
+  <h3>Certifications</h3>
+  <div class="certs">
+    <span class="cert">Python</span>
+    <span class="cert">Machine Learning with Python</span>
+    <span class="cert">Generative AI</span>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- STRENGTHS -->
+<section>
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Core strengths</div>
+  <h2>How I <span class="gradient">work.</span></h2>
+</div>
+
+<div class="skills">
+
+  <article class="skill reveal">
+    <div class="icon">🧠</div>
+    <h3>Problem Solving</h3>
+    <p>Breaking complex problems into clear, manageable solutions.</p>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">💡</div>
+    <h3>Logical Thinking</h3>
+    <p>Using structured reasoning to design efficient solutions.</p>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🐞</div>
+    <h3>Debugging</h3>
+    <p>Finding, understanding and fixing technical issues.</p>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🏗️</div>
+    <h3>OOP</h3>
+    <p>Writing organized, reusable and maintainable code.</p>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🧩</div>
+    <h3>Data Structures</h3>
+    <p>Applying fundamental structures and algorithms to problems.</p>
+  </article>
+
+  <article class="skill reveal">
+    <div class="icon">🚀</div>
+    <h3>Continuous Learning</h3>
+    <p>Turning new concepts into practical projects and experiments.</p>
+  </article>
+
+</div>
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+
+<div class="section-head reveal">
+  <div class="eyebrow">Contact</div>
+  <h2>Let's create something <span class="gradient">great.</span></h2>
+  <p>
+    I'm always interested in learning, building and connecting
+    with people working on interesting technology.
+  </p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact reveal">
+
+  <h3>Get in touch</h3>
+
+  <p>
+    Feel free to connect with me through any of the platforms below.
+  </p>
+
+  <div class="contact-list">
+
+    <a href="mailto:amansharma15012005@gmail.com">
+      ✉️ &nbsp; amansharma15012005@gmail.com
+    </a>
+
+    <a href="tel:+919837407090">
+      📱 &nbsp; +91 9837407090
+    </a>
+
+    <a href="https://www.linkedin.com/aman-sharma-58a3b4269/" target="_blank">
+      💼 &nbsp; LinkedIn
+    </a>
+
+    <a href="https://github.com/Aman113114-droid" target="_blank">
+      💻 &nbsp; GitHub
+    </a>
+
+    <a href="https://github.com/in/Aman113114-droid" target="_blank">
+      📍 &nbsp; Meerut, Uttar Pradesh
+    </a>
+
+  </div>
+
+</div>
+
+
+<div class="contact reveal">
+
+  <h3>Send me a message</h3>
+
+  <p>
+    This form opens your email application with the message prepared.
+  </p>
+
+  <form id="contactForm">
+
+    <input
+      id="senderName"
+      type="text"
+      placeholder="Your name"
+      required>
+
+    <input
+      id="senderEmail"
+      type="email"
+      placeholder="Your email"
+      required>
+
+    <textarea
+      id="senderMessage"
+      placeholder="Tell me about your project..."
+      required></textarea>
+
+    <button
+      type="submit"
+      class="btn primary">
+
+      Send Message →
+
+    </button>
+
+  </form>
+
+</div>
+
+</div>
+</div>
+</section>
+
+</main>
+
+
+<footer>
+<div class="container footer">
+
+  <div>
+    © <span id="year"></span>
+    Aman Sharma.
+    Built with HTML, CSS & JavaScript.
+  </div>
+
+  <div class="socials">
+    <a href="https://github.com/in/Aman113114-droid" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/aman-sharma-58a3b4269/" target="_blank">LinkedIn</a>
+    <a href="#home">↑ Top</a>
+  </div>
+
+</div>
+</footer>
+
+
+<script>
+
+/* =========================
+   TYPING EFFECT
+========================= */
+
+const words = [
+  "Python Developer",
+  "Machine Learning Engineer",
+  "NLP Enthusiast",
+  "Problem Solver",
+  "AI Developer"
+];
+
+const typing = document.getElementById("typing");
+
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function typeText(){
+
+  const word = words[wordIndex];
+
+  charIndex += deleting ? -1 : 1;
+
+  typing.textContent = word.substring(0,charIndex);
+
+  let speed = deleting ? 45 : 80;
+
+  if(!deleting && charIndex === word.length){
+    deleting = true;
+    speed = 1300;
+  }
+
+  if(deleting && charIndex === 0){
+    deleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    speed = 300;
+  }
+
+  setTimeout(typeText,speed);
+}
+
+typeText();
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const observer = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+
+    });
+
+  },
+  {threshold:.12}
+);
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(el => observer.observe(el));
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menu =
+  document.getElementById("menu");
+
+const navLinks =
+  document.getElementById("navLinks");
+
+menu.addEventListener("click",() => {
+  navLinks.classList.toggle("open");
+});
+
+navLinks
+  .querySelectorAll("a")
+  .forEach(link => {
+
+    link.addEventListener("click",() => {
+      navLinks.classList.remove("open");
+    });
+
+  });
+
+
+/* =========================
+   CURSOR GLOW
+========================= */
+
+const glow =
+  document.getElementById("glow");
+
+window.addEventListener(
+  "pointermove",
+  e => {
+
+    glow.style.left =
+      e.clientX + "px";
+
+    glow.style.top =
+      e.clientY + "px";
+
+  }
+);
+
+
+/* =========================
+   THEME
+========================= */
+
+const theme =
+  document.getElementById("theme");
+
+let light = false;
+
+theme.addEventListener("click",() => {
+
+  light = !light;
+
+  if(light){
+
+    document.documentElement
+      .style.setProperty(
+        "--bg",
+        "#edf3ff"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--bg2",
+        "#e5ebf8"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--text",
+        "#111827"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--muted",
+        "#526078"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--card",
+        "rgba(255,255,255,.72)"
+      );
+
+    theme.textContent = "☾";
+
+  }else{
+
+    document.documentElement
+      .style.setProperty(
+        "--bg",
+        "#050816"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--bg2",
+        "#0a1022"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--text",
+        "#f7f9ff"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--muted",
+        "#9eabc2"
+      );
+
+    document.documentElement
+      .style.setProperty(
+        "--card",
+        "rgba(15,23,42,.68)"
+      );
+
+    theme.textContent = "☼";
+
+  }
+
+});
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+document
+  .getElementById("contactForm")
+  .addEventListener(
+    "submit",
+    e => {
+
+      e.preventDefault();
+
+      const name =
+        document.getElementById(
+          "senderName"
+        ).value;
+
+      const email =
+        document.getElementById(
+          "senderEmail"
+        ).value;
+
+      const message =
+        document.getElementById(
+          "senderMessage"
+        ).value;
+
+      const subject =
+        encodeURIComponent(
+          "Portfolio Contact — " + name
+        );
+
+      const body =
+        encodeURIComponent(
+          "Name: " + name +
+          "\nEmail: " + email +
+          "\n\nMessage:\n" + message
+        );
+
+      window.location.href =
+        "mailto:amansharma15012005@gmail.com" +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+    }
+  );
+
+
+/* =========================
+   YEAR
+========================= */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* =========================
+   PARTICLES
+========================= */
+
+const canvas =
+  document.getElementById("particles");
+
+const ctx =
+  canvas.getContext("2d");
+
+let particles = [];
+
+function resize(){
+
+  canvas.width =
+    window.innerWidth *
+    devicePixelRatio;
+
+  canvas.height =
+    window.innerHeight *
+    devicePixelRatio;
+
+  canvas.style.width =
+    window.innerWidth + "px";
+
+  canvas.style.height =
+    window.innerHeight + "px";
+
+  ctx.setTransform(
+    devicePixelRatio,
+    0,
+    0,
+    devicePixelRatio,
+    0,
+    0
+  );
+
+  particles =
+    Array.from(
+      {
+        length:
+          Math.min(
+            100,
+            Math.floor(
+              window.innerWidth / 12
+            )
+          )
+      },
+      () => ({
+
+        x:
+          Math.random() *
+          window.innerWidth,
+
+        y:
+          Math.random() *
+          window.innerHeight,
+
+        vx:
+          (Math.random()-.5)*.35,
+
+        vy:
+          (Math.random()-.5)*.35,
+
+        r:
+          Math.random()*1.5+.3
+
+      })
+    );
+}
+
+window.addEventListener(
+  "resize",
+  resize
+);
+
+resize();
+
+
+function animate(){
+
+  ctx.clearRect(
+    0,
+    0,
+    window.innerWidth,
+    window.innerHeight
+  );
+
+  particles.forEach(
+    (p,i) => {
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if(
+        p.x < 0 ||
+        p.x > window.innerWidth
+      ){
+        p.vx *= -1;
+      }
+
+      if(
+        p.y < 0 ||
+        p.y > window.innerHeight
+      ){
+        p.vy *= -1;
+      }
+
+      ctx.beginPath();
+
+      ctx.arc(
+        p.x,
+        p.y,
+        p.r,
+        0,
+        Math.PI*2
+      );
+
+      ctx.fillStyle =
+        "rgba(160,180,255,.55)";
+
+      ctx.fill();
+
+
+      for(
+        let j=i+1;
+        j<particles.length;
+        j++
+      ){
+
+        const q =
+          particles[j];
+
+        const dx =
+          p.x-q.x;
+
+        const dy =
+          p.y-q.y;
+
+        const distance =
+          Math.hypot(dx,dy);
+
+        if(distance < 105){
+
+          ctx.beginPath();
+
+          ctx.moveTo(
+            p.x,
+            p.y
+          );
+
+          ctx.lineTo(
+            q.x,
+            q.y
+          );
+
+          ctx.strokeStyle =
+            `rgba(
+              124,
+              92,
+              255,
+              ${(1-distance/105)*.13}
+            )`;
+
+          ctx.stroke();
+        }
+      }
+    }
+  );
+
+  requestAnimationFrame(
+    animate
+  );
+}
+
+animate();
+
+</script>
+
+</body>
+</html>
